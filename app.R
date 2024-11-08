@@ -1,7 +1,7 @@
 library(shiny)
 library(bslib)
 
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "~/rclone_logs.duckdb", read_only = TRUE)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "/dados/home/rfsaldanha/rclone_logs.duckdb", read_only = TRUE)
 logs_tb <- dplyr::tbl(con, "logs")
 
 ui <- page_sidebar(
