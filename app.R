@@ -2,7 +2,7 @@ library(shiny)
 library(bslib)
 library(ggplot2)
 
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "../rclone-datasus/logs.duckdb", read_only = TRUE)
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "~/rclone_logs.duckdb", read_only = TRUE)
 logs_tb <- dplyr::tbl(con, "logs")
 
 ui <- page_sidebar(
